@@ -61,9 +61,15 @@ Run server Vite for the Vue app.
 ```
 $ npm run dev -- --host
 ```
+> If your ddev uses an SSL certificate, in the frontend/.env file, change the address from ***http*** to ***https***.<br>
+> For example:<br> 
+> + http: `VITE_APP_BACKEND=http://borecka-rekru.ddev.site`
+> + https: `VITE_APP_BACKEND=https://borecka-rekru.ddev.site`
+
+
 Open browser:
 * for http: `http://borecka-rekru.ddev.site:5172`
-* for hhtps: `https://borecka-rekru.ddev.site:5173`
+* for https: `https://borecka-rekru.ddev.site:5173`
 
 ## reCAPTCHA
 
