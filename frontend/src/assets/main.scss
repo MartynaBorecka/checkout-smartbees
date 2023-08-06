@@ -1,0 +1,19 @@
+@import "./color.scss";
+@import "./buttons.scss";
+
+#app {
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+
+  height: 1200px;
+
+  @media screen and (min-width: 768px) {
+    min-width: 768px;
+  }
+  @media screen and (min-width: 992px) {
+    min-width: 992px;
+  }
+}

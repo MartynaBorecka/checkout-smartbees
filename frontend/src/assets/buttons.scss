@@ -1,0 +1,159 @@
+@import './color.scss';
+
+@mixin buttonStyle($color) {
+  color: $color;
+  text-decoration: none;
+  border: 2px solid $color;
+  padding: 10px 40px;
+  font-size: 17px;
+  cursor: pointer;
+  background: transparent;
+  position: relative;
+  width: 100%;
+  transition: color .5s, background-color .5s;
+  overflow: hidden;
+  margin: 10px 0;
+  border-radius: 4px;
+
+  &:hover {
+    color: white;
+    background-color: $color;
+  }
+}
+
+@mixin confirmButtonStyle ($height) {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+  background: $btnConfirm;
+  border: 2px solid $btnConfirm;
+  font-size: 13px;
+  height: $height;
+  padding: 0 11px;
+  text-align: center;
+  min-width: 50px;
+  font-weight: 500;
+  color: $primaryFontColor;
+  transition: color .5s, background-color .5s;
+
+  &:hover {
+    background: $primaryFontColor;
+    border: 2px solid $btnConfirm;
+    color: $btnConfirm;
+  }
+
+  @media screen and (min-width: 992px) {
+    width: 100%;
+  }
+}
+
+.btnLogin {
+  @include buttonStyle ($btnLogin);
+  margin: 10px 0;
+}
+
+.btnDiscount {
+  @include buttonStyle($btnDiscount);
+
+}
+.btnConfirm {
+  @include confirmButtonStyle(60px);
+  width: 100%;
+  
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
+  @media screen and (min-width: 992px) {
+    width: 100%;
+}
+}
+.btnNewsletterConfirm {
+  @include confirmButtonStyle(40px);
+  margin-top: 10px;
+  width: 100%;
+}
+
+.btnPopupLogin {
+  height: 45px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 18px;
+  background-color: $btnLogin;
+  color: #fff;
+  margin: 30px 0;
+  transition: color .5s, background-color .5s;
+
+  &:hover {
+    color: $btnLogin;
+    background-color: $primaryFontColor;
+    border: 1px solid $btnLogin;
+  }
+}
+
+.btnPopupClose {
+  position: absolute;
+  right: -20px;
+  top: -130px;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.add-discount {
+  width: 20%;
+  box-sizing: border-box;
+  height: 50px;
+  cursor: pointer;
+  align-items: center;
+  background: $btnLogin;
+  border: 2px solid $btnLogin;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  &:hover {
+    background: #ff3636;
+
+  }
+}
+
+.back-homepage {
+  background-color: $btnLogin;
+  color: $primaryFontColor;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  padding: 1em 1.8em;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+
+  &:hover {
+    background-color: white;
+    color: $btnLogin;
+    border: 1px solid $btnLogin;
+  }
+}
+.btnNewsletterClose {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-weight: 800;
+  font-size: 30px;
+}
